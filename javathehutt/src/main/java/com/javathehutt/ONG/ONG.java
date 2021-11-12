@@ -2,10 +2,21 @@ package com.javathehutt.ONG;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "ONG")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ONG   {
+    @XmlAttribute(name = "equipoONG")
     private EquipoONG equipoONG;
+    @XmlAttribute(name = "proyectos")
     private List<Proyecto> proyectos;
+    @XmlAttribute(name = "ingresos")
     private List<Ingresos> ingresos;
+    @XmlAttribute(name = "delegaciones")
     private final List<Delegacion> delegaciones;
 
     public ONG(EquipoONG equipoONG, List<Delegacion> delegaciones) {
@@ -16,6 +27,7 @@ public class ONG   {
     public EquipoONG getEquipoONG() {
         return equipoONG;
     }
+
 
     public void setEquipoONG(EquipoONG equipoONG) {
         this.equipoONG = equipoONG;

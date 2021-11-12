@@ -2,19 +2,37 @@ package com.javathehutt.ONG;
 
 import java.sql.Date;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement(name = "Proyecto")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Proyecto {
 
+    @XmlAttribute(name = "nombre")
     private String nombre;
+    @XmlAttribute(name = "pais")
     private String pais;
+    @XmlAttribute(name = "localizacion")
     private String localizacion;
+    @XmlAttribute(name = "fechaInicio")
     private Date fechaInicio;
+    @XmlAttribute(name = "fechaFin")
     private Date fechaFin;
+    @XmlAttribute(name = "socioLoccal")
     private String socioLocal;
+    @XmlAttribute(name = "financiador")
     private String financiador;
+    @XmlAttribute(name = "finanaciacionaportada")
     private float financiacionaportada;
+    @XmlAttribute(name = "codigoProyecto")
     private int codigoProyecto;
+    @XmlAttribute(name = "tipoProyecto")
     private String tipoProyecto;
+    @XmlAttribute(name = "PersonalAsignado")
     private String personalAsignado;
+    @XmlAttribute(name = "lineaAccion")
     private LineaAccion lineaAccion;
 
     public Proyecto(String nombre, String pais, String localizacion, int codigoProyecto, String tipoProyecto) {
